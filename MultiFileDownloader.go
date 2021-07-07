@@ -32,7 +32,7 @@ func main() {
 		result := Result{
 			Results:      []LoadData{},
 			Time:         "",
-			ErrorMessage: "Please provide only one argument: [timeout in seconds] [app name] [Url]:[output file path];...;[Url-n]:[output file-n path]",
+			ErrorMessage: "Please provide only one argument: [app-name] [timeout in seconds] \"[Url]:[output file path];...;[Url-n]:[output file-n path]\"",
 		}
 		r, e := json.Marshal(result)
 		if e != nil {
