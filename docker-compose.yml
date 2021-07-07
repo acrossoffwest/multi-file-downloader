@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  alpine:
+    image: golang:alpine3.13
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: go build -o builds/mfd-alpine MultiFileDownloader.go
+  buster:
+    image: golang:latest
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: go build -o builds/mfd-buster MultiFileDownloader.go
+
